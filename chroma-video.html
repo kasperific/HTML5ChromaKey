@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>HTML 5 Chroma Key</title>
+    <meta charset="utf-8">        
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="chroma.js"></script>
+    <link href="chroma.css" rel="stylesheet" />
+
+</head>
+<body onload="draw();">
+<!-- From Metia Labs, Mark Mower 
+    http://www.metia.com/london/mark-mower/2012/12/building-an-html5-green-screen-(chroma-key)-dynamic-video-player/ 
+
+I simplified the js and markup so it's just the green screen and resulting video. There's still some ever so slight green artifacting because my video sample has some literally furry edges, and the lightness of the fur bounces off some green glare. Even so, it comes pretty darn close to what you would otherwise have to do with video editing software. 
+
+-->
+    
+<div id="wrapper" class="clearfix">
+    <div id="output">
+        <p>Canvas output</p>
+        <canvas id="videoscreen">
+            <p>Sorry your browser does not support HTML5</p>
+        </canvas>
+    </div>
+    <div id="source">
+        <video style="" id="videodata" loop="loop" preload="auto" autoplay="autoplay" width="320" height="180">
+            <source src="PixieGreenScreen539_512kb.mp4" type='video/mp4' />
+            <source src="PixieGreenScreen539.ogv" type='video/ogg' />
+        </video>  
+    </div>
+        <div id="backgroundvideo" style="display: none;">
+        <p>Background Video</p>
+        <video style="" id="videoBackgrounddata" loop="" preload="auto" autoplay="autoplay" width="320" height="180" src="clouds_512kb.mp4">
+        </video>
+    </div>
+</div>
+
+</body>
+</html>
