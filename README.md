@@ -1,4 +1,4 @@
-HTML5ChromaKey
+HTML5 Chroma Key
 ==============
 
 Green screen effect with HTML5 and JavaScript
